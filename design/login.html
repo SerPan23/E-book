@@ -8,7 +8,7 @@
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/827a6fbe84.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="libs/almbb/almbb.css">
-    <title>Main page</title>
+    <title>Вход</title>
     <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/login.css">
@@ -16,7 +16,7 @@
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <a class="navbar-brand logo" href="index.html">E-Book</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -47,31 +47,33 @@
     <!-- Content -->
         <div class="main">
             <div class="container warp">
-                <form class="formbox needs-validation" novalidate>
-                    <h2>Войти</h2>
-                    <div class="form-group" style="text-align: left">
-                        <label for="exampleInputEmail1">Email адресс</label>
-                        <input name="email" class="form-control formInput" placeholder="example@gmail.com" required>
-                    </div>
-                    <div style="text-align: left">
-                        <label for="password">Пароль</label>
-                    </div>
-                    <div class="form-label-group input-group">
-                        <input type="password" id="password" class="form-control formInput" name="password" placeholder="Пароль"
-                            required>
-                        <div class="input-group-append" @click="showHidePwd()" style="cursor: pointer;">
-                            <span class="input-group-text showHidePwd">
-                                <i id="eye" class="far fa-eye-slash"></i>
-                            </span>
+                <div class="box mt-auto mb-auto">
+                    <form class="formbox needs-validation" novalidate>
+                        <h2 style="text-align: center;">Войти</h2>
+                        <div class="form-group" style="text-align: left">
+                            <label for="exampleInputEmail1">Email адресс</label>
+                            <input name="email" class="form-control formInput" placeholder="example@gmail.com" required>
                         </div>
-                    </div>
-                    <div class="form-row">
-                        <button class="btn btn-rounded-blue btn-lg" @click="loginUser()">Войти</button>
-                    </div>
-                </form> <br>
-                <p>
-                    <a href="registration.html" class="link">Еще нет аккаунта? Зарегистрируйтесь</a>
-                </p>
+                        <div style="text-align: left">
+                            <label for="password">Пароль</label>
+                        </div>
+                        <div class="form-label-group input-group">
+                            <input type="password" id="password" class="form-control formInput" name="password" placeholder="Пароль"
+                                required>
+                            <div class="input-group-append" @click="showHidePwd()" style="cursor: pointer;">
+                                <span class="input-group-text showHidePwd">
+                                    <i id="eye" class="far fa-eye-slash"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <button class="btn btn-rounded-blue btn-lg" @click="loginUser()">Войти</button>
+                        </div>
+                    </form> <br>
+                    <p>
+                        <a href="registration.html" class="link">Еще нет аккаунта? Зарегистрируйтесь</a>
+                    </p>
+                </div>
             </div>
         </div>
     <!-- End content -->

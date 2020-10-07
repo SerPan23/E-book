@@ -8,7 +8,7 @@
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/827a6fbe84.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="libs/almbb/almbb.css">
-    <title>Main page</title>
+    <title>Регистрация</title>
     <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/registration.css">
@@ -16,7 +16,7 @@
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <a class="navbar-brand logo" href="index.html">E-Book</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -48,48 +48,56 @@
     <!-- Content -->
         <div class="main">
             <div class="container warp">
-                <form class="formbox">
-                    <h2>Регистрация</h2>
-                    <div class="form-group row">
-                        <label for="exampleInputEmail1">Имя</label>
-                        <input name="name" class="form-control formInput" placeholder="Имя" required>
-                    </div>
-                    <div class="form-group row">
-                        <label for="exampleInputEmail1">Фамилия</label>
-                        <input name="surname" class="form-control formInput" placeholder="Фамилия" required>
-                    </div>
-                    <div class="form-group row">
-                        <label for="exampleInputEmail1">Email адресс</label>
-                        <input type="email" name="email" class="form-control formInput" placeholder="example@gmail.com"
-                            required>
-                    </div>
-                    <div class="form-group row">
-                        <label for="exampleInputEmail1">Дата рождения</label>
-                        <input type="date" class="form-control formInput" name="age" min="1900-01-01" required>
-                    </div>
-                    <div class="form-group row">
-                        <label for="exampleInputPassword1">Пароль</label>
-                        <input type="password" class="form-control formInput" name="password" placeholder="Пароль" required>
-                    </div>
-                    <div class="form-group row">
-                        <label for="exampleInputPassword1">Повторите пароль</label>
-                        <input type="password" class="form-control formInput" name="password2" placeholder="Повторите пароль"
-                            required>
-                    </div>
-                    <div class="form-group form-check row" style="text-align: left; margin: 0px 0.5em">
-                        <input name="accessPrivacy" type="checkbox" class="form-check-input" id="accessPrivacy">
-                        <label class="form-check-label" for="accessPrivacy">Согласен с
-                                <a href="#" class="links">политикой конфиденциальности</a>
-                        </label>
-                    </div> <br>
-                    <div class="form-group row code" style="display: none;">
-                        <label for="exampleInputPassword1">Введите код подтверждения из Вашей почты</label>
-                        <input type="password" class="form-control formInput" name="code" placeholder="Код подтверждения">
-                    </div>
-                    <div class="row">
-                        <button class="btn btn-rounded-blue btn-lg" @click="addUser()">Зарегистрироваться</button>
-                    </div>
-                </form> <br>
+                <div class="box mt-auto mb-auto">
+                    <form class="formbox">
+                        <h2 style="text-align: center;">Регистрация</h2> <br>
+                        <div class="input-group row">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text formInput">Имя и Фамилия</span>
+                            </div>
+                            <input type="text" name="name" aria-label="First name" class="form-control">
+                            <input type="text" name="surname" aria-label="Last name" class="form-control formInput">
+                        </div> <br>
+                        <div class="input-group flex-nowrap row">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text formInput" id="addon-wrapping"><i class="far fa-envelope"></i></span>
+                            </div>
+                            <input type="email" name="email" class="form-control formInput" placeholder="example@gmail.com" aria-label="email"
+                                aria-describedby="addon-wrapping">
+                        </div> <br>
+                        <div class="input-group flex-nowrap row">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text formInput" id="addon-wrapping"><i class="fas fa-calendar-day"></i></span>
+                            </div>
+                            <input type="date" class="form-control formInput" name="age" min="1900-01-01" required>
+                        </div><br>
+                        <div class="input-group flex-nowrap row">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text formInput" id="addon-wrapping"><i class="fas fa-lock"></i></span>
+                            </div>
+                            <input type="password" class="form-control formInput" name="password" placeholder="Пароль" required>
+                        </div><br>
+                        <div class="input-group flex-nowrap row">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text formInput" id="addon-wrapping"><i class="fas fa-lock"></i></span>
+                            </div>
+                            <input type="password" class="form-control formInput" name="password2" placeholder="Повторите пароль" required>
+                        </div><br>
+                        <div class="form-group form-check row" style="text-align: left; margin: 0px 0.5em">
+                            <input name="accessPrivacy" type="checkbox" class="form-check-input" id="accessPrivacy">
+                            <label class="form-check-label" for="accessPrivacy">Согласен с
+                                    <a href="#" class="links">политикой конфиденциальности</a>
+                            </label>
+                        </div> <br>
+                        <!-- <div class="form-group row code" style="display: none;">
+                            <label for="exampleInputPassword1">Введите код подтверждения из Вашей почты</label>
+                            <input type="password" class="form-control formInput" name="code" placeholder="Код подтверждения">
+                        </div> -->
+                        <div class="row">
+                            <button class="btn btn-rounded-blue btn-lg" @click="addUser()">Зарегистрироваться</button>
+                        </div>
+                    </form> <br>
+                </div>
             </div>
         </div>
     <!-- End content -->

@@ -1,15 +1,15 @@
-.warp {
-    padding-top: 210px !important;
-    background-color: #fff;
-    padding: 0px 30px;
+.main {
+    background-image: url(../images/backinreg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-/* .main {
-    height: 100%;
-    padding: 0px;
+.warp {
+    padding-top: 250px !important;
+    /* background-color: #fff; */
+    padding: 0px 30px;
     min-height: 100vh;
-    margin-bottom: 0px;
-} */
+}
 
 .main p {
     color: #4f4f50;
@@ -43,4 +43,10 @@ i:hover {
 
 .showHidePwd {
     border-radius: 50px;
+}
+
+.box {
+    padding: 30px;
+    border-radius: 30px;
+    background-color: rgba(236, 236, 236, 0.829);
 }
