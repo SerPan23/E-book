@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +11,9 @@
     <title>Main page</title>
     <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/login.css">
 </head>
+
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -24,7 +27,8 @@
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-blue btn-almbb-small my-2 my-sm-0" type="submit">Search</button>
             </form>
-            <a type="button" class="btn btn-rounded-blue btn-almbb-small userprbtn" href="login.html" style="display:block">Войти</a>
+            <a type="button" class="btn btn-rounded-blue btn-almbb-small userprbtn" href="login.html"
+                style="display:block">Войти</a>
             <div class="dropdown person_menu" style="display:none">
                 <button class="btn btn-rounded-blue dropdown-toggle user btn-almbb-small userprbtn" type="button"
                     id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -40,11 +44,37 @@
     </nav>
     <!-- Navbar end -->
 
-
     <!-- Content -->
-    
+        <div class="main">
+            <div class="container warp">
+                <form class="formbox needs-validation" novalidate>
+                    <h2>Войти</h2>
+                    <div class="form-group" style="text-align: left">
+                        <label for="exampleInputEmail1">Email адресс</label>
+                        <input name="email" class="form-control formInput" placeholder="example@gmail.com" required>
+                    </div>
+                    <div style="text-align: left">
+                        <label for="password">Пароль</label>
+                    </div>
+                    <div class="form-label-group input-group">
+                        <input type="password" id="password" class="form-control formInput" name="password" placeholder="Пароль"
+                            required>
+                        <div class="input-group-append" @click="showHidePwd()" style="cursor: pointer;">
+                            <span class="input-group-text showHidePwd">
+                                <i id="eye" class="far fa-eye-slash"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <button class="btn btn-rounded-blue btn-lg" @click="loginUser()">Войти</button>
+                    </div>
+                </form> <br>
+                <p>
+                    <a href="registration.html" class="link">Еще нет аккаунта? Зарегистрируйтесь</a>
+                </p>
+            </div>
+        </div>
     <!-- End content -->
-
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -57,4 +87,5 @@
         crossorigin="anonymous"></script>
     <script src="libs/almbb/almbb.js"></script>
 </body>
+
 </html>

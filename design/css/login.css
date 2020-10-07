@@ -1,0 +1,46 @@
+.warp {
+    padding-top: 210px !important;
+    background-color: #fff;
+    padding: 0px 30px;
+}
+
+/* .main {
+    height: 100%;
+    padding: 0px;
+    min-height: 100vh;
+    margin-bottom: 0px;
+} */
+
+.main p {
+    color: #4f4f50;
+    text-align: left !important;
+    font-size: 0.86em;
+    margin-left: -10px;
+}
+
+.link {
+    color: #4f4f50;
+    text-decoration: none;
+}
+
+.link:hover {
+    color: #EF5B65;
+    text-decoration: none;
+}
+
+.form-label-group {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+i:hover {
+    cursor: pointer;
+}
+
+.formInput {
+    border-radius: 50px;
+}
+
+.showHidePwd {
+    border-radius: 50px;
+}

@@ -1,0 +1,15 @@
+.warp {
+    padding-top: 50px !important;
+    background-color: #fff;
+    padding: 0px 30px;
+}
+/* .main {
+    height: 100%;
+    padding: 0px;
+    min-height: 100vh;
+    margin-bottom: 0px;
+} */
+
+.formInput {
+    border-radius: 50px;
+}
