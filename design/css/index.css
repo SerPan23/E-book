@@ -6,6 +6,13 @@ html {
     min-height: 100vh;
 }
 
+.maini {
+    padding-top: 250px !important;
+    /* background-color: #fff; */
+    padding: 0px 30px;
+    min-height: 100vh;
+}
+
 .userprbtn {
     font-family: 'PT Mono', monospace;
     min-width: 190px;
